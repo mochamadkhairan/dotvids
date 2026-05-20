@@ -1,13 +1,15 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "DotVids" },
-    { name: "description", content: "Welcome to DotVids!" },
-  ];
-}
+import { HeroSection } from "~/components/sections/HeroSection";
+import { FeaturesSection } from "~/components/sections/FeaturesSection";
+import { PortfolioSection } from "~/components/sections/PortfolioSection";
+import { CTASection } from "~/components/sections/CTASection";
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <PortfolioSection preview />  {/* preview=true → hanya 6 item */}
+      <CTASection />
+    </>
+  );
 }
