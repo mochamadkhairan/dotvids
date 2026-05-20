@@ -14,15 +14,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800">
       <nav className="container-max h-16 md:h-20 flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-1 group">
-          <div className="text-2xl md:text-3xl font-bold tracking-tight">
-            <span style={{ fontFamily: "Montserrat", fontWeight: 700 }} className="text-blue-600 dark:text-blue-400">
-              Dot
-            </span>
-            <span style={{ fontFamily: "Poppins", fontWeight: 400 }} className="text-slate-700 dark:text-gray-300">
-              Vids
-            </span>
-          </div>
+        <Link to="/" className="flex items-center group">
+          <img
+            src="/logo.png"
+            alt="DotVids Logo"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

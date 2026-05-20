@@ -13,14 +13,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
             {/* Brand Info */}
             <div className="lg:col-span-1">
-              <div className="text-2xl font-bold tracking-tight mb-4">
-                <span style={{ fontFamily: "Montserrat", fontWeight: 700 }} className="text-blue-400">
-                  Dot
-                </span>
-                <span style={{ fontFamily: "Poppins", fontWeight: 400 }} className="text-gray-300">
-                  Vids
-                </span>
-              </div>
+              <Link to="/" className="flex items-center group">
+                <img
+                  src="/logo.png"
+                  alt="DotVids Logo"
+                  className="h-10 md:h-12 w-auto object-contain"
+                />
+              </Link>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Crafting premium digital experiences through innovative design and technology.
               </p>
