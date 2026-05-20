@@ -1,12 +1,15 @@
 import type { TeamMember } from "~/types/components";
 
-export const teamMembers: TeamMember[] = [
+export const teamMembers: (TeamMember & { initials: string; accentColor: string; skills: string[] })[] = [
   {
     id: "member-1",
-    name: "Alex Rivera",
+    name: "Budi Santoso",
     role: "Creative Director",
-    bio: "Visionary creative leader with 10+ years of design and branding expertise. Passionate about crafting digital experiences that inspire.",
+    bio: "Visioner kreatif dengan 10+ tahun pengalaman di industri film dan produksi konten visual.",
     image: "/images/team/alex.jpg",
+    initials: "BS",
+    accentColor: "#7EE8A2",
+    skills: ["Concept", "Direction", "Visual Design"],
     social: [
       { platform: "twitter", url: "https://twitter.com" },
       { platform: "linkedin", url: "https://linkedin.com" },
@@ -15,10 +18,13 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "member-2",
-    name: "Jordan Chen",
-    role: "Lead Developer",
-    bio: "Full-stack engineer with deep expertise in modern web technologies. Building scalable, performant applications is Jordan's passion.",
+    name: "Rina Wijaya",
+    role: "Lead Editor",
+    bio: "Editor berpengalaman yang menguasai color grading, visual effects, dan post-production modern.",
     image: "/images/team/jordan.jpg",
+    initials: "RW",
+    accentColor: "#C8A96E",
+    skills: ["Editing", "Color Grading", "VFX"],
     social: [
       { platform: "github", url: "https://github.com" },
       { platform: "linkedin", url: "https://linkedin.com" },
@@ -27,10 +33,13 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "member-3",
-    name: "Sam Williams",
-    role: "Video Producer",
-    bio: "Award-winning videographer and editor specializing in cinematic storytelling and motion graphics. Creates content that moves audiences.",
+    name: "Ahmad Pratama",
+    role: "Cinematographer",
+    bio: "Sinematografer profesional dengan keahlian dalam teknik lighting dan komposisi visual yang stunning.",
     image: "/images/team/sam.jpg",
+    initials: "AP",
+    accentColor: "#69B4FF",
+    skills: ["Cinematography", "Lighting", "Camera Operation"],
     social: [
       { platform: "twitter", url: "https://twitter.com" },
       { platform: "linkedin", url: "https://linkedin.com" },
@@ -39,10 +48,13 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "member-4",
-    name: "Taylor Martinez",
-    role: "Strategy & Growth",
-    bio: "Digital strategist focused on driving growth and impact. Combines data-driven insights with creative thinking to solve complex challenges.",
+    name: "Siti Nurhaliza",
+    role: "Motion Graphics Designer",
+    bio: "Motion designer yang menciptakan animasi dan grafis bergerak yang memorable dan impactful.",
     image: "/images/team/taylor.jpg",
+    initials: "SN",
+    accentColor: "#E0C5FF",
+    skills: ["Motion Design", "Animation", "3D Graphics"],
     social: [
       { platform: "linkedin", url: "https://linkedin.com" },
       { platform: "twitter", url: "https://twitter.com" },
@@ -50,10 +62,13 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "member-5",
-    name: "Casey Lee",
-    role: "UX/UI Designer",
-    bio: "User-centered designer creating intuitive interfaces that delight users. Specializes in design systems and accessible design practices.",
+    name: "Hendra Kusuma",
+    role: "Producer",
+    bio: "Produser berpengalaman dalam mengelola proyek dari pre-production hingga final delivery.",
     image: "/images/team/casey.jpg",
+    initials: "HK",
+    accentColor: "#FF9E64",
+    skills: ["Project Management", "Client Relations", "Production Planning"],
     social: [
       { platform: "dribbble", url: "https://dribbble.com" },
       { platform: "linkedin", url: "https://linkedin.com" },
@@ -62,10 +77,13 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "member-6",
-    name: "Morgan Tech",
-    role: "DevOps Engineer",
-    bio: "Infrastructure expert ensuring our systems run smoothly and securely. Passionate about automation and cloud technologies.",
+    name: "Lisa Wijaya",
+    role: "Sound Designer",
+    bio: "Audio specialist yang menciptakan pengalaman sonik yang membuat video lebih hidup dan engaging.",
     image: "/images/team/morgan.jpg",
+    initials: "LW",
+    accentColor: "#A3E635",
+    skills: ["Sound Design", "Audio Engineering", "Music Selection"],
     social: [
       { platform: "github", url: "https://github.com" },
       { platform: "linkedin", url: "https://linkedin.com" },
@@ -73,3 +91,5 @@ export const teamMembers: TeamMember[] = [
     ],
   },
 ];
+
+export const team = teamMembers;

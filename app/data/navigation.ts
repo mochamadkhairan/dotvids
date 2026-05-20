@@ -18,10 +18,6 @@ export const navLinks: NavLink[] = [
     href: "/portfolio",
   },
   {
-    label: "Team",
-    href: "/team",
-  },
-  {
     label: "Contact",
     href: "/contact",
   },
@@ -29,46 +25,45 @@ export const navLinks: NavLink[] = [
 
 export const footerLinks = [
   {
-    label: "Product",
+    label: "Services",
     items: [
-      { label: "Features", href: "/features" },
-      { label: "Pricing", href: "/pricing" },
-      { label: "Security", href: "/security" },
-      { label: "Status", href: "/status" },
+      { label: "Video Production", href: "/services#video-production" },
+      { label: "Motion Graphics", href: "/services#motion-graphics" },
+      { label: "Brand Film", href: "/services#brand-film" },
+      { label: "Social Content", href: "/services#social-content" },
     ],
   },
   {
     label: "Company",
     items: [
-      { label: "About", href: "/about" },
-      { label: "Blog", href: "/blog" },
-      { label: "Careers", href: "/careers" },
+      { label: "About Us", href: "/about" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Team", href: "/about#team" },
       { label: "Contact", href: "/contact" },
     ],
   },
   {
     label: "Resources",
     items: [
-      { label: "Documentation", href: "/docs" },
-      { label: "Community", href: "/community" },
-      { label: "GitHub", href: "https://github.com" },
-      { label: "API", href: "/api" },
+      { label: "Blog", href: "/blog" },
+      { label: "Case Studies", href: "/portfolio" },
+      { label: "Instagram", href: "https://instagram.com/dotvids.id" },
+      { label: "YouTube", href: "https://youtube.com/dotvids" },
     ],
   },
   {
     label: "Legal",
     items: [
-      { label: "Privacy", href: "/privacy" },
-      { label: "Terms", href: "/terms" },
-      { label: "Cookies", href: "/cookies" },
-      { label: "License", href: "/license" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Cookie Policy", href: "/cookies" },
     ],
   },
 ];
 
 export const socialLinks = [
-  { platform: "twitter", url: "https://twitter.com" },
-  { platform: "linkedin", url: "https://linkedin.com" },
-  { platform: "github", url: "https://github.com" },
-  { platform: "dribbble", url: "https://dribbble.com" },
+  { platform: "twitter", url: "https://twitter.com/dotvids" },
+  { platform: "linkedin", url: "https://linkedin.com/company/dotvids" },
+  { platform: "dribbble", url: "https://dribbble.com/dotvids" },
+  { platform: "github", url: "https://github.com/dotvids" },
 ];

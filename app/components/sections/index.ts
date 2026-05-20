@@ -1,7 +1,8 @@
+export { HeroSection } from "./HeroSection";
 export { FeaturesSection } from "./FeaturesSection";
 export { PortfolioSection } from "./PortfolioSection";
 export { CTASection } from "./CTASection";
-// Tambahkan nanti:
-// export { HeroSection } from "./HeroSection";
-// export { TeamSection } from "./TeamSection";
-// export { TestimonialsSection } from "./TestimonialsSection";
+export { ServicesSection } from "./ServicesSection";
+export { AboutSection } from "./AboutSection";
+export { TeamSection } from "./TeamSection";
+export { ContactSection } from "./ContactSection";
