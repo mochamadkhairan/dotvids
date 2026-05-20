@@ -1,0 +1,72 @@
+import type { PortfolioItem } from "~/types/components";
+
+export const portfolioItems: PortfolioItem[] = [
+  {
+    id: "project-alpha",
+    title: "Alpha Platform",
+    description: "Real-time analytics dashboard for enterprise clients",
+    image: "/images/portfolio/alpha.jpg",
+    category: "web",
+    tags: ["React", "TypeScript", "Tailwind"],
+    featured: true,
+    link: "/portfolio/alpha",
+  },
+  {
+    id: "project-nexus",
+    title: "Nexus App",
+    description: "Mobile-first communication platform for remote teams",
+    image: "/images/portfolio/nexus.jpg",
+    category: "mobile",
+    tags: ["React Native", "Firebase", "Design"],
+    featured: true,
+    link: "/portfolio/nexus",
+  },
+  {
+    id: "project-luminous",
+    title: "Luminous Brand",
+    description: "Complete brand identity redesign for tech startup",
+    image: "/images/portfolio/luminous.jpg",
+    category: "branding",
+    tags: ["Branding", "Design", "Strategy"],
+    featured: false,
+    link: "/portfolio/luminous",
+  },
+  {
+    id: "project-velocity",
+    title: "Velocity Commerce",
+    description: "E-commerce platform with advanced features",
+    image: "/images/portfolio/velocity.jpg",
+    category: "web",
+    tags: ["Next.js", "Stripe", "PostgreSQL"],
+    featured: true,
+    link: "/portfolio/velocity",
+  },
+  {
+    id: "project-horizon",
+    title: "Horizon Video",
+    description: "Professional video hosting and streaming platform",
+    image: "/images/portfolio/horizon.jpg",
+    category: "video",
+    tags: ["Video", "Streaming", "Infrastructure"],
+    featured: false,
+    link: "/portfolio/horizon",
+  },
+  {
+    id: "project-zenith",
+    title: "Zenith Analytics",
+    description: "AI-powered data analysis tool for businesses",
+    image: "/images/portfolio/zenith.jpg",
+    category: "web",
+    tags: ["AI", "Analytics", "Python"],
+    featured: false,
+    link: "/portfolio/zenith",
+  },
+];
+
+export const portfolioCategories = [
+  { value: "all", label: "All Projects" },
+  { value: "web", label: "Web Development" },
+  { value: "mobile", label: "Mobile Apps" },
+  { value: "video", label: "Video" },
+  { value: "branding", label: "Branding" },
+];
