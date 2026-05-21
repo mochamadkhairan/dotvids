@@ -33,8 +33,8 @@ export default function Header() {
                   to={link.href}
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
-                      : "text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      ? "text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-cyan-500/10"
+                      : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400"
                   }`}
                 >
                   {link.label}
@@ -89,8 +89,8 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
-                      : "text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      ? "text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-cyan-500/10"
+                      : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400"
                   }`}
                 >
                   {link.label}

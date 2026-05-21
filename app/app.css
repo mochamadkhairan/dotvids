@@ -54,7 +54,7 @@ html, body {
 }
 
 .dark html, .dark body, html.dark, body.dark {
-  background-color: #0f172a;
+  background-color: #050810;
   color: #f9fafb;
   color-scheme: dark;
 }
@@ -187,8 +187,26 @@ html, body {
    GRADIENT EFFECTS
    ============================================ */
 
+/* ============================================
+   GRADIENT EFFECTS
+   ============================================ */
+
 .gradient-blue-to-cyan {
   background: linear-gradient(135deg, #1456c8 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1456c8 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

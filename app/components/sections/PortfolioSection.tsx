@@ -23,18 +23,18 @@ export function PortfolioSection({ preview = false }: PortfolioSectionProps) {
   const displayed = preview ? filtered.slice(0, 6) : filtered;
 
   return (
-    <section className="section-padding bg-white dark:bg-slate-950">
+    <section className="section-padding bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950">
       <div className="container-max">
         {/* Section Header */}
         <ScrollRevealElement className="text-center mb-12">
-          <span className="caption text-blue-600 dark:text-blue-400 mb-3 block">
+          <span className="caption text-blue-600 dark:text-cyan-400 mb-3 block">
             ✦ Portfolio Kami
           </span>
-          <h2 className="heading-2 text-slate-900 dark:text-gray-50 mb-4">
+          <h2 className="heading-2 text-slate-900 dark:text-white mb-4">
             Karya yang{" "}
             <span className="gradient-blue-to-cyan">Bicara Sendiri</span>
           </h2>
-          <p className="body-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="body-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Setiap project adalah cerita unik. Berikut sebagian karya terbaik
             kami yang telah membantu brand berkembang.
           </p>
@@ -49,8 +49,8 @@ export function PortfolioSection({ preview = false }: PortfolioSectionProps) {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-blue-600 text-white glow-blue"
-                    : "bg-gray-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "bg-blue-600 dark:bg-cyan-500 text-white glow-blue"
+                    : "bg-gray-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400"
                 }`}
               >
                 {cat}
@@ -67,7 +67,7 @@ export function PortfolioSection({ preview = false }: PortfolioSectionProps) {
               delay={index * 80}
               direction="up"
             >
-              <div className="group relative rounded-xl overflow-hidden bg-slate-800 aspect-video cursor-pointer card-interactive">
+              <div className="group relative rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-700/50 aspect-video cursor-pointer card-interactive">
                 {/* Thumbnail image */}
                 {item.image ? (
                   <img
@@ -77,22 +77,22 @@ export function PortfolioSection({ preview = false }: PortfolioSectionProps) {
                   />
                 ) : (
                   /* Placeholder kalau belum ada gambar */
-                  <div className="absolute inset-0 gradient-mesh-bg flex items-center justify-center">
+                  <div className="absolute inset-0 gradient-mesh-bg dark:bg-gradient-to-br dark:from-blue-900/20 dark:to-cyan-900/20 flex items-center justify-center">
                     <span className="text-4xl">🎬</span>
                   </div>
                 )}
 
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Info reveal on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <span className="caption text-blue-400 mb-1 block">
+                  <span className="caption text-cyan-400 mb-1 block">
                     {item.category ?? "Project"}
                   </span>
                   <h3 className="heading-4 text-white mb-1">{item.title}</h3>
                   {item.description && (
-                    <p className="body-sm text-slate-300 line-clamp-2">{item.description}</p>
+                    <p className="body-sm text-slate-200 line-clamp-2">{item.description}</p>
                   )}
                 </div>
 

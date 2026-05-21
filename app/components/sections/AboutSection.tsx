@@ -81,8 +81,13 @@ export function AboutSection() {
       <style>{`
         .about-section {
           padding: 120px 0;
-          background: #0D0D0D;
+          background: #ffffff;
           position: relative;
+          transition: background-color 0.3s ease;
+        }
+
+        .dark .about-section {
+          background: #050810;
         }
 
         .about-section::before {
@@ -93,6 +98,10 @@ export function AboutSection() {
           right: 0;
           height: 1px;
           background: linear-gradient(90deg, transparent, rgba(126,232,162,0.3), transparent);
+        }
+
+        .dark .about-section::before {
+          background: linear-gradient(90deg, transparent, rgba(34,211,238,0.4), transparent);
         }
 
         .about-container {
@@ -129,36 +138,61 @@ export function AboutSection() {
           font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: #7EE8A2;
+          color: #2563eb;
           margin-bottom: 20px;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-label {
+          color: #22d3ee;
         }
 
         .about-title {
           font-size: clamp(2rem, 4vw, 2.8rem);
           font-weight: 700;
-          color: #F0EDE6;
+          color: #0f172a;
           margin: 0 0 24px;
           line-height: 1.15;
           letter-spacing: -0.02em;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-title {
+          color: #ffffff;
         }
 
         .about-title em {
           font-style: italic;
-          color: #7EE8A2;
+          color: #2563eb;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-title em {
+          color: #22d3ee;
         }
 
         .about-lead {
           font-size: 1.05rem;
           line-height: 1.7;
-          color: rgba(240,237,230,0.7);
+          color: #404854;
           margin: 0 0 16px;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-lead {
+          color: #cbd5e1;
         }
 
         .about-body {
           font-size: 0.9rem;
           line-height: 1.75;
-          color: rgba(240,237,230,0.45);
+          color: #64748b;
           margin: 0 0 36px;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-body {
+          color: #94a3b8;
         }
 
         .about-tagline {
@@ -166,24 +200,40 @@ export function AboutSection() {
           gap: 12px;
           align-items: flex-start;
           padding: 24px;
-          border-left: 2px solid #7EE8A2;
-          background: rgba(126,232,162,0.04);
+          border-left: 2px solid #2563eb;
+          background: rgba(37,99,235,0.05);
+          transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dark .about-tagline {
+          border-left-color: #22d3ee;
+          background: rgba(34,211,238,0.08);
         }
 
         .about-tagline__mark {
           font-size: 3rem;
           line-height: 0.6;
-          color: #7EE8A2;
+          color: #2563eb;
           opacity: 0.5;
           flex-shrink: 0;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-tagline__mark {
+          color: #22d3ee;
         }
 
         .about-tagline p {
           font-size: 1rem;
           font-style: italic;
-          color: rgba(240,237,230,0.6);
+          color: #475569;
           margin: 0;
           line-height: 1.6;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-tagline p {
+          color: #cbd5e1;
         }
 
         .about-values {
@@ -196,14 +246,22 @@ export function AboutSection() {
           display: flex;
           gap: 24px;
           padding: 28px 0;
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          border-bottom: 1px solid rgba(30,41,59,0.2);
           opacity: 0;
           transform: translateX(24px);
-          transition: opacity 0.55s ease, transform 0.55s ease;
+          transition: opacity 0.55s ease, transform 0.55s ease, border-color 0.3s ease;
+        }
+
+        .dark .about-value {
+          border-bottom-color: rgba(59,130,246,0.2);
         }
 
         .about-value:first-child {
-          border-top: 1px solid rgba(255,255,255,0.06);
+          border-top: 1px solid rgba(30,41,59,0.2);
+        }
+
+        .dark .about-value:first-child {
+          border-top-color: rgba(59,130,246,0.2);
         }
 
         .about-value--visible {
@@ -214,26 +272,41 @@ export function AboutSection() {
         .about-value__num {
           font-size: 0.72rem;
           font-weight: 700;
-          color: rgba(126,232,162,0.5);
+          color: rgba(37,99,235,0.6);
           letter-spacing: 0.1em;
           flex-shrink: 0;
           padding-top: 4px;
           min-width: 24px;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-value__num {
+          color: rgba(34,211,238,0.7);
         }
 
         .about-value__title {
           font-size: 1rem;
           font-weight: 600;
-          color: #F0EDE6;
+          color: #0f172a;
           margin: 0 0 8px;
           letter-spacing: -0.01em;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-value__title {
+          color: #ffffff;
         }
 
         .about-value__desc {
           font-size: 0.85rem;
           line-height: 1.65;
-          color: rgba(240,237,230,0.4);
+          color: #64748b;
           margin: 0;
+          transition: color 0.3s ease;
+        }
+
+        .dark .about-value__desc {
+          color: #94a3b8;
         }
       `}</style>
     </section>

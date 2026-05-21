@@ -102,8 +102,13 @@ export function TeamSection() {
       <style>{`
         .team-section {
           padding: 120px 0;
-          background: #111010;
+          background: #ffffff;
           position: relative;
+          transition: background-color 0.3s ease;
+        }
+
+        .dark .team-section {
+          background: #050810;
         }
 
         .team-section::before {
@@ -113,7 +118,7 @@ export function TeamSection() {
           left: 0;
           right: 0;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(224,197,255,0.3), transparent);
+          background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
         }
 
         .team-container {
@@ -133,22 +138,37 @@ export function TeamSection() {
           font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: #E0C5FF;
+          color: #2563eb;
           margin-bottom: 16px;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-label {
+          color: #22d3ee;
         }
 
         .team-title {
           font-size: clamp(2rem, 4.5vw, 3rem);
           font-weight: 700;
-          color: #F0EDE6;
+          color: #0f172a;
           margin: 0;
           letter-spacing: -0.02em;
           line-height: 1.15;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-title {
+          color: #ffffff;
         }
 
         .team-title em {
           font-style: italic;
-          color: #E0C5FF;
+          color: #2563eb;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-title em {
+          color: #22d3ee;
         }
 
         .team-grid {
@@ -167,8 +187,8 @@ export function TeamSection() {
         }
 
         .team-card {
-          background: #171717;
-          border: 1px solid rgba(255,255,255,0.06);
+          background: #ffffff;
+          border: 1px solid rgba(30,41,59,0.2);
           padding: 28px 24px;
           display: flex;
           flex-direction: column;
@@ -177,8 +197,13 @@ export function TeamSection() {
           overflow: hidden;
           opacity: 0;
           transform: translateY(28px);
-          transition: opacity 0.55s ease, transform 0.55s ease, border-color 0.3s ease;
+          transition: opacity 0.55s ease, transform 0.55s ease, border-color 0.3s ease, background-color 0.3s ease;
           cursor: default;
+        }
+
+        .dark .team-card {
+          background: rgba(59,130,246,0.05);
+          border-color: rgba(59,130,246,0.2);
         }
 
         .team-card--visible {
@@ -187,7 +212,11 @@ export function TeamSection() {
         }
 
         .team-card--active {
-          border-color: rgba(255,255,255,0.12);
+          border-color: rgba(59,130,246,0.4);
+        }
+
+        .dark .team-card--active {
+          border-color: rgba(34,211,238,0.4);
         }
 
         .team-card__line {
@@ -212,7 +241,12 @@ export function TeamSection() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(255,255,255,0.04);
+          background: rgba(37,99,235,0.08);
+          transition: background-color 0.3s ease;
+        }
+
+        .dark .team-card__avatar {
+          background: rgba(34,211,238,0.1);
         }
 
         .team-card__initials {
@@ -230,9 +264,14 @@ export function TeamSection() {
         .team-card__name {
           font-size: 1rem;
           font-weight: 600;
-          color: #F0EDE6;
+          color: #0f172a;
           margin: 0;
           letter-spacing: -0.01em;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-card__name {
+          color: #ffffff;
         }
 
         .team-card__role {
@@ -245,8 +284,13 @@ export function TeamSection() {
         .team-card__bio {
           font-size: 0.83rem;
           line-height: 1.6;
-          color: rgba(240,237,230,0.4);
+          color: #64748b;
           margin: 8px 0 0;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-card__bio {
+          color: #94a3b8;
         }
 
         .team-card__skills {
@@ -260,17 +304,27 @@ export function TeamSection() {
           font-size: 0.72rem;
           padding: 3px 10px;
           border: 1px solid;
-          color: rgba(240,237,230,0.4);
+          color: #64748b;
           letter-spacing: 0.02em;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-card__skill {
+          color: #94a3b8;
         }
 
         .team-stats {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          border: 1px solid rgba(255,255,255,0.06);
+          border: 1px solid rgba(30,41,59,0.2);
           opacity: 0;
           transform: translateY(20px);
-          transition: opacity 0.6s ease, transform 0.6s ease;
+          transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .dark .team-stats {
+          background: rgba(59,130,246,0.05);
+          border-color: rgba(59,130,246,0.2);
         }
 
         .team-stats--visible {
@@ -284,10 +338,15 @@ export function TeamSection() {
 
         .team-stat {
           padding: 32px 24px;
-          border-right: 1px solid rgba(255,255,255,0.06);
+          border-right: 1px solid rgba(30,41,59,0.2);
           display: flex;
           flex-direction: column;
           gap: 6px;
+          transition: border-color 0.3s ease;
+        }
+
+        .dark .team-stat {
+          border-right-color: rgba(59,130,246,0.2);
         }
 
         .team-stat:last-child {
@@ -297,16 +356,26 @@ export function TeamSection() {
         .team-stat__num {
           font-size: 2rem;
           font-weight: 700;
-          color: #C8A96E;
+          color: #2563eb;
           letter-spacing: -0.03em;
           line-height: 1;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-stat__num {
+          color: #22d3ee;
         }
 
         .team-stat__label {
           font-size: 0.78rem;
-          color: rgba(240,237,230,0.4);
+          color: #64748b;
           letter-spacing: 0.04em;
           text-transform: uppercase;
+          transition: color 0.3s ease;
+        }
+
+        .dark .team-stat__label {
+          color: #94a3b8;
         }
       `}</style>
     </section>

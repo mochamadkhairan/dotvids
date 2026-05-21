@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { navItems } from "~/data/navigation";
+import { navLinks } from "~/data/navigation";
+import type { NavLink } from "~/types/components";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -41,7 +42,7 @@ export function MobileMenu({ isOpen, onClose, isDark, onToggleDark }: MobileMenu
 
         {/* Nav links */}
         <nav className="flex flex-col p-6 gap-2">
-          {navItems.map((item) => (
+          {navLinks.map((item: NavLink) => (
             <Link
               key={item.href}
               to={item.href}
